@@ -1,7 +1,6 @@
-calibration from 20200201 to 20200831
+In calibration part, we try to optimize four parameters,
 
-beta = 0.010238725857084912,
-
-pop\_infected = 120.26178436253423,
-
-rel\_death\_prob = 0.8196689676330258
+beta, 
+rel_death_prob from 2020-02-01 to 2020-06-17, 
+rel_death_prob from 2020-06-17 to 2020-10-17, 
+rel_death_prob from 2020-10-17 to 2020-12-31.
