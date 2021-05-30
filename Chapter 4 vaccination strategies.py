@@ -289,9 +289,9 @@ def create_sim(seed,d):
     nv_beta = cv.change_beta(days=nv_days, changes=nv_change)
     
     c = np.r_[0.8*np.ones(sim.day('2021-02-13')-sim.day('2020-12-14')), 0.4*np.ones(sim.day('2021-03-29')-sim.day('2021-02-13'))]
-    relative_severe = cv.dynamic_pars(rel_severe_prob=dict(days=nv_days, vals=nv_prop*1.2 + (1-nv_prop)*1))
-    relative_critical = cv.dynamic_pars(rel_crit_prob=dict(days=nv_days, vals=nv_prop*1.2 + (1-nv_prop)*1))
-    relative_death_nv = cv.dynamic_pars(rel_death_prob=dict(days=nv_days, vals=nv_prop*c*1.2+ (1-nv_prop)*c))  
+    relative_severe = cv.dynamic_pars(rel_severe_prob=dict(days=nv_days, vals=nv_prop*1.0 + (1-nv_prop)*1))
+    relative_critical = cv.dynamic_pars(rel_crit_prob=dict(days=nv_days, vals=nv_prop*1.0 + (1-nv_prop)*1))
+    relative_death_nv = cv.dynamic_pars(rel_death_prob=dict(days=nv_days, vals=nv_prop*c*1.0+ (1-nv_prop)*c))  
     interventions += [nv_beta,relative_severe,relative_critical,relative_death_nv]
     
     # import infections from 2020-02-20 to 2020-03-01
