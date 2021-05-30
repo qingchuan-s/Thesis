@@ -290,10 +290,10 @@ def create_sim1(seed):
     interventions += [cv.test_num(daily_tests=sim.data['new_tests'], start_day=0, end_day=sim.day(end_day), test_delay=1, symp_test=50,
                     sensitivity=0.97,subtarget= prior_test)]
     
-    vaccine1 = vaccine_plan(daily1, start_day='2021-01-06',end_day = '2021-01-24', delay = 22, rel_symp=0.5, rel_sus=0.2) 
-    vaccine2 = vaccine_plan(daily2, start_day='2021-01-25',end_day = '2021-02-15', delay = 27, rel_symp=0.5, rel_sus=0.2)
-    vaccine3 = vaccine_plan(daily3, start_day='2021-02-16',end_day = '2021-03-07', delay = 24, rel_symp=0.5, rel_sus=0.2)
-    vaccine4 = vaccine_plan(daily4, start_day='2021-03-08',end_day = '2021-04-10', delay = 37, rel_symp=0.5, rel_sus=0.2)
+    vaccine1 = vaccine_plan(daily1, start_day='2021-01-06',end_day = '2021-01-24', delay = 22, rel_symp=0.5, rel_sus=0.2,subtarget= vaccinate_by_age) 
+    vaccine2 = vaccine_plan(daily2, start_day='2021-01-25',end_day = '2021-02-15', delay = 27, rel_symp=0.5, rel_sus=0.2,subtarget= vaccinate_by_age)
+    vaccine3 = vaccine_plan(daily3, start_day='2021-02-16',end_day = '2021-03-07', delay = 24, rel_symp=0.5, rel_sus=0.2,subtarget= vaccinate_by_age)
+    vaccine4 = vaccine_plan(daily4, start_day='2021-03-08',end_day = '2021-04-10', delay = 37, rel_symp=0.5, rel_sus=0.2,subtarget= vaccinate_by_age)
   
     interventions += [vaccine1,vaccine2,vaccine3,vaccine4]    
     
@@ -399,10 +399,10 @@ def create_sim2(seed):
     interventions += [cv.test_num(daily_tests=sim.data['new_tests'], start_day=0, end_day=sim.day(end_day), test_delay=1, symp_test=50,
                     sensitivity=0.97,subtarget= prior_test)]
     
-    vaccine1 = vaccine_plan(daily1, start_day='2021-01-06',end_day = '2021-01-24', delay = 22, rel_symp=0.5, rel_sus=0.2) 
-    vaccine2 = vaccine_plan(daily2, start_day='2021-01-25',end_day = '2021-02-15', delay = 27, rel_symp=0.5, rel_sus=0.2)
-    vaccine3 = vaccine_plan(daily3, start_day='2021-02-16',end_day = '2021-03-07', delay = 24, rel_symp=0.5, rel_sus=0.2)
-    vaccine4 = vaccine_plan(daily4, start_day='2021-03-08',end_day = '2021-04-10', delay = 37, rel_symp=0.5, rel_sus=0.2)
+    vaccine1 = vaccine_plan(daily1, start_day='2021-01-06',end_day = '2021-01-24', delay = 22, rel_symp=0.5, rel_sus=0.2,subtarget= vaccinate_by_age) 
+    vaccine2 = vaccine_plan(daily2, start_day='2021-01-25',end_day = '2021-02-15', delay = 27, rel_symp=0.5, rel_sus=0.2,subtarget= vaccinate_by_age)
+    vaccine3 = vaccine_plan(daily3, start_day='2021-02-16',end_day = '2021-03-07', delay = 24, rel_symp=0.5, rel_sus=0.2,subtarget= vaccinate_by_age)
+    vaccine4 = vaccine_plan(daily4, start_day='2021-03-08',end_day = '2021-04-10', delay = 37, rel_symp=0.5, rel_sus=0.2,subtarget= vaccinate_by_age)
     
     interventions += [vaccine1,vaccine2,vaccine3,vaccine4]    
     
