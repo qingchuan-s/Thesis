@@ -249,7 +249,7 @@ def create_sim(seed,d):
     # Create the baseline simulation
     sim = cv.Sim(pars=pars, datafile=data_file, location='denmark',analyzers=cv.age_histogram(edges = [0,16,65,130],states=['exposed','symptomatic','dead'])) #edges = [0,16,65,130],
     
-    sim['prognoses']['sus_ORs'][1] = 1.0
+    #sim['prognoses']['sus_ORs'][1] = 1.0
     
     relative_death = cv.dynamic_pars(rel_death_prob=dict(days=[sim.day('2020-02-01'),sim.day('2020-06-09'),sim.day('2020-09-17')], 
                                                                vals=[1.3,0.8,0.4]))
